@@ -1,6 +1,6 @@
 .product-card{
     width: 320px;
-    height:460px;
+    height:420px;
 
 
     &__img{
@@ -18,9 +18,11 @@
         text-align: center;
         h3{
             font-size:1.4rem;
+            text-transform: capitalize;
+            padding: 10px 0;
         }
         span{
-            
+
         }
     }
 }

@@ -9,26 +9,27 @@ const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
 
-    // const getProducts = async () => {
+    const getProducts = async () => {
 
-    //     try {
-    //         const resp = await fetch(url);
-    //         setProducts(resp.json());
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-        
+        try {
+            const resp = await fetch(url);//esperamos a que se cumpla la promesa
+            const data = await resp.json();//esperamos a que se parse la respuesta
+            setProducts(data);//seteamos nuestro state de productos
+        } catch (error) {
+            console.log(error);
+        }
 
-    // }
+    }
 
     useEffect(() => {
-        
-        // getProducts();
-        /*uso de fetch API*/
-        fetch(url)
-            .then(resp => resp.json())
-            .then(data => setProducts(data))
-            .catch(err=> console.log(err));
+        /*uso de fetch con async/await*/
+        getProducts();
+
+        /*uso de fetch API con promesas --descomentar y comentar "getProducts()' para probar--*/
+        // fetch(url)
+        //     .then(resp => resp.json())
+        //     .then(data => setProducts(data))
+        //     .catch(err=> console.log(err));
 
     }, [])
     

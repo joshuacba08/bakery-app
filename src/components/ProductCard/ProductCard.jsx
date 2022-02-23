@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
         </div>
         <div className="product-card__detail">
             <h3> { product.name } </h3>
-            <span></span>
+            <span> ${ product.price } </span>
         </div>
     </article>
   )
