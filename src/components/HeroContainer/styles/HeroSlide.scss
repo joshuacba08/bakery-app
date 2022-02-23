@@ -1,0 +1,63 @@
+@import '../../../scss/abstracts/mixins';
+
+.hero-slide{
+    @include flex-r-center;
+    width:100vw;
+    height:calc(100vh - 79px);
+    position: relative;
+    padding:15px;
+
+
+
+    &__bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        filter: brightness(0.5) contrast(0.9);
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__caption{
+        text-align: center;
+        color: var(--just-white);
+        position: relative;
+        h2{
+            font-size:2.2rem;
+            text-transform:uppercase;
+        }
+        p{
+            margin-top:20px;text-transform: capitalize;
+        }
+    }
+}
+
+
+.hero-slide__controls{
+    display: flex;
+    gap:30px;
+    position: absolute;
+    bottom: 20px;
+
+    .controls__item{
+        
+        width:14px;
+        height:14px;
+        border-radius:50%;
+        background-color: var(--just-white);
+        opacity: 0.5;
+        transition:all 320ms ease-in-out;
+    }
+    .control-selected{
+        @include shadow-elevation-4;
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+
+}
+

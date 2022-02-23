@@ -1,0 +1,20 @@
+@import '../../scss/abstracts/mixins';
+
+.cartwidget-container{
+    @include flex-r-center;
+
+    &__bread-icon{
+        font-size:2rem;
+    }
+
+    &__qty{
+        @include flex-r-center;
+        background-color: var(--fill-yellow);
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        position: relative;
+        left:-8px;
+        top:-2px;
+    }
+}

@@ -1,0 +1,22 @@
+@import '../../scss/abstracts/mixins';
+
+.header-container{
+    @include shadow-bottom;
+    padding:10px 15px;
+    position: relative;
+    z-index: 99;
+
+    .barnav-container{
+        @include flexhbetween;
+    
+        .md-menu{
+            font-size:2rem;
+        }
+    
+        .logo{
+            width: 100px;
+        }
+    
+    }
+    
+}
