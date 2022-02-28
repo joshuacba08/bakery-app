@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 import './ProductCard.scss';
@@ -10,7 +11,9 @@ const ProductCard = ({ product }) => {
             <img src={ product.img } alt="" />
         </div>
         <div className="product-card__detail">
-            <h3> { product.name } </h3>
+            <Link to={`/product/${ product.id }`}>
+              <h3> { product.name } </h3>
+            </Link>
             <span> ${ product.price } </span>
         </div>
     </article>
