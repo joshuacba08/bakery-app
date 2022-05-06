@@ -1,43 +1,47 @@
 import React, { useEffect, useState } from 'react'
 import ProductCard from '../ProductCard/ProductCard';
-import { getProducts } from '../../helpers/getProducts';
 
 import './ItemListContainer.scss';
 
 const ItemListContainer = () => {
 
+    const url = "https://run.mocky.io/v3/d03bc1b0-ecf9-4cbe-97a8-073437e7135a"
+
     const [products, setProducts] = useState([]);
 
+    const getProducts = async ( ) => {
+        try {
+
+            const response = await fetch(url);
+            const data = await response.json();
+            console.table(data);
+            setProducts(data);
+
+        } catch (error) {
+            console.danger(error)
+        }        
+    }
+
     useEffect(() => {
-        /*uso de fetch con async/await*/
-        getProducts(setProducts);
-
-        /*uso de fetch API con promesas --descomentar y comentar "getProducts()' para probar--*/
-        // fetch(url)
-        //     .then(resp => resp.json())
-        //     .then(data => setProducts(data))
-        //     .catch(err=> console.log(err));
-
+        getProducts();
     }, [])
-    
 
 
   return (
     <section className="products-container">
-
         {
-            products.length ?          
-            (
-                products.map( product => {
-                    return(
-                        <div key={product.name}>
-                            <ProductCard product={product} />
-                        </div>
-                        
+            products.length ? (
+                products.map( prod => {
+                    return (
+                            <ProductCard 
+                                key={ prod.id }
+                                product={prod}
+                            />
                     )
                 })
-            )
-            : <p>Cargando productos...</p>
+             ) 
+            : 
+            <p>Cargando productos...</p>
         }
 
     </section>

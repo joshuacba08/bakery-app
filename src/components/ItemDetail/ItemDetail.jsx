@@ -1,10 +1,11 @@
 import React from 'react'
 
+import './ItemDetail.scss';
 const ItemDetail = ({product}) => {
   return (
-    <article>
-        <img src={ product.img } />
-        <h1>{product.name}</h1>
+    <article className="detail">
+        <img src={ product.image } />
+        <h1>{product.productName}</h1>
         <p>${product.price}</p>
     </article>
   )

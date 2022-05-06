@@ -5,8 +5,8 @@ import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailCon
 
 const DetailPage = () => {
 
-  const { id } = useParams();
-
+  const { id } = useParams(); //cualquier cosa que venga en el useParams es un string
+ 
   return (
     <main>
       <h1>Detalle de Producto {id}</h1>
