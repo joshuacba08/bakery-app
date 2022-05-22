@@ -2,8 +2,8 @@
 
 .hero-slide{
     @include flex-r-center;
-    width:100vw;
-    height:calc(100vh - 79px);
+    width: 100%;
+    height:100vh;
     position: relative;
     padding:15px;
 
@@ -32,6 +32,23 @@
         }
         p{
             margin-top:20px;text-transform: capitalize;
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        h2{
+            font-size: 3rem;
+        }
+        p{
+            font-size:1.2rem;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        h2{
+            font-size: 3.6rem;
+        }
+        p{
+            font-size:1.4rem;
         }
     }
 }

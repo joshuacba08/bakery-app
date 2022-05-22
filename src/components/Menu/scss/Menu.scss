@@ -1,0 +1,36 @@
+.links {
+  display: none;
+
+  @media only screen and (min-width: 1024px) {
+    display: block;
+    &-container{
+        display: flex;
+        gap:48px;
+        &__items{ 
+            display:flex;
+            align-items: center;
+            gap: 2px;
+            text-transform: uppercase;
+            color:var(--just-white);
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding:6px 0;
+            a{
+                color:var(--just-white);
+            }
+            .sub-menu{
+              display:none;
+              position: relative;
+            }
+        }
+    }
+  }
+}
+
+.links-container__items:hover{
+  .sub-menu{
+    display:block;
+    position: absolute;
+    top:64px;
+  }
+}

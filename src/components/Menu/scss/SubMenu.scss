@@ -1,0 +1,13 @@
+.submenu-container{
+    background-color: var(--just-white);
+    padding:1px 20px;
+    border-radius:2px;
+    &__items{
+        color:var(--black-text);
+        display:flex;
+        flex-direction:column;
+        margin: 14px 0;
+        text-transform: capitalize;
+    }
+
+}

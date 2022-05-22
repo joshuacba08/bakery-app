@@ -1,0 +1,44 @@
+const menu = [
+    {
+        id:1,
+        path:'/',
+        name:'home',
+        subPath:[]
+    },
+    {
+        id:2,
+        path:'/products',
+        name:'productos',
+        subPath:[
+            {
+                id:1,
+                path:'/pasteleria',
+                name:'pastelería',
+            },
+            {
+                id:2,
+                path:'/panaderia',
+                name:'panadería',
+            },
+            {
+                id:1,
+                path:'/navidad',
+                name:'navidad',
+            },
+        ]
+    },
+    {
+        id:3,
+        path:'/about',
+        name:'nosotros',
+        subPath:[]
+    },
+    {
+        id:4,
+        path:'/contact',
+        name:'contactanos',
+        subPath:[]
+    },
+];
+
+export default menu;

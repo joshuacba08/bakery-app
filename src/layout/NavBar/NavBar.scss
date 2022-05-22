@@ -2,21 +2,46 @@
 
 .header-container{
     @include shadow-bottom;
-    padding:10px 15px;
-    position: relative;
+    padding:20px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 99;
+    background: var(--just-white);
 
     .barnav-container{
         @include flexhbetween;
+        max-width: 800px;
+        margin: 0 auto;
     
         .md-menu{
             font-size:2rem;
         }
-    
         .logo{
             width: 100px;
+            height:60px;
+            background-image: url('../../assets/images/logo-dark.png');
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size:contain;
         }
-    
+    }
+
+    @media only screen and (min-width: 1024px){
+        background: transparent;
+        box-shadow: none;
+        .barnav-container{
+            max-width: 1400px;
+            padding:0 40px;
+            .md-menu{
+                color:var(--just-white);
+                display: none;
+            }
+            .logo{
+                background-image: url('../../assets/images/logo-light_b.png');
+            }
+        }
     }
     
 }

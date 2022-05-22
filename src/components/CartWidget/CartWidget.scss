@@ -5,6 +5,7 @@
 
     &__bread-icon{
         font-size:2rem;
+        @include transition-all-250ms-eino;
     }
 
     &__qty{
@@ -16,5 +17,10 @@
         position: relative;
         left:-8px;
         top:-2px;
+    }
+    @media only screen and (min-width: 1024px){
+        &__bread-icon{
+            color:var(--just-white);
+        }
     }
 }
