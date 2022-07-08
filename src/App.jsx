@@ -1,8 +1,7 @@
 import React from 'react';
-
 import AppRouter from './routes/AppRouter';
-import './App.scss';
 import CartProvider from './context/CartContext';
+import './App.scss';
 
 function App() {
 

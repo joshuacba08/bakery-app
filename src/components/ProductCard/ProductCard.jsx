@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
@@ -7,10 +7,10 @@ import ItemCount from '../ItemCount/ItemCount';
 import './ProductCard.scss';
 
 const ProductCard = ({ product }) => {
-
   const { image, productName, id , price } = product;
-  const cartContext = useContext( CartContext );
-  const { addToCart } = cartContext;
+
+  const cartContex = useContext( CartContext );
+  const { addToCart } = cartContex;
 
   return (
     <article className="product-card">

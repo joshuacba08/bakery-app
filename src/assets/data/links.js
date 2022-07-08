@@ -21,7 +21,7 @@ const menu = [
                 name:'panadería',
             },
             {
-                id:1,
+                id:3,
                 path:'/navidad',
                 name:'navidad',
             },

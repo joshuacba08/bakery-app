@@ -9,7 +9,6 @@ const ItemListContainer = () => {
     const url = "https://run.mocky.io/v3/d03bc1b0-ecf9-4cbe-97a8-073437e7135a"
 
     const { category } = useParams();
-    console.log(category)
     const [products, setProducts] = useState([]);
 
     const getProducts = async ( ) => {
