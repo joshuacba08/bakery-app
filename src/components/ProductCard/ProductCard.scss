@@ -1,17 +1,30 @@
 .product-card{
-    width: 320px;
+    width: 300px;
     height:420px;
+    
 
 
     &__img{
         width:100%;
-        height:300px;
+        height:340px;
+        overflow:hidden;
+        position: relative;
 
         img{
             width:100%;
             height:100%;
             object-fit:cover;
         }
+        .button{
+            position: absolute;
+            left: 0;
+            bottom: -40px;
+            transition: all 0.250s ease-in-out;
+        }
+
+        &:hover .button{
+            bottom: 0px;
+        } 
     }
 
     &__detail{
@@ -26,3 +39,6 @@
         }
     }
 }
+
+
+

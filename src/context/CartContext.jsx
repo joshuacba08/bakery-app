@@ -4,7 +4,7 @@ export const CartContext = createContext();
 
 const CartProvider = (props) => {
     /*Métodos y funciones, states, etc*/
-    const [cart, setCart] = useState([]);
+    const [ cart, setCart ] = useState([]);
 
     const addToCart = (item, qty) => {
         const newItem = {...item, qty};
