@@ -1,3 +1,19 @@
 .count-container{
-    display: grid;
+    margin: 30px 0;
+    display: flex;
+    gap:30px;
+    &__controlls{
+        display: grid;
+        grid-template: 1fr / 40px 20px 40px;
+        gap:10px;
+        div{
+            text-align: center;
+            line-height:39px;
+            color: var(--black-text);
+            font-size:1.1rem;
+        }
+        button:disabled{
+            background-color: var(--fill-grey);
+        }
+    }
 }

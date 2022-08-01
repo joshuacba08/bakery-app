@@ -1,0 +1,34 @@
+.gallery-grid{
+    display: grid;
+    width:420px;
+    min-width: 320px;
+    gap:20px;
+    grid-template: 470px 126px / 1fr 1fr 1fr;
+
+    &__item{
+        height: 100%;
+        width: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        &:nth-child(1){
+            grid-column: 1 / span 3;
+            grid-row: 1 /span 1;
+        }
+
+        &:nth-child(2) img{
+            object-position: top left;
+        }
+        &:nth-child(3) img{
+            object-position: bottom right;
+        }
+        &:nth-child(4){
+            overflow: hidden;
+            img{
+                transform: scale(1.5);
+            }
+        }
+    }
+}

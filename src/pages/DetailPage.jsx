@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { useParams } from 'react-router-dom';
+import Banner from '../components/Banner/Banner';
 import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer';
 
 const DetailPage = () => {
@@ -9,7 +9,8 @@ const DetailPage = () => {
  
   return (
     <main>
-      <h1>Detalle de Producto {id}</h1>
+      <Banner title="Detalle del producto" subtitle="Conocé más acerca de este producto" img="https://images.pexels.com/photos/5634637/pexels-photo-5634637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+
       <ItemDetailContainer id={id} />
 
 

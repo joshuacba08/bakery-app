@@ -1,0 +1,31 @@
+.detail{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    padding:60px 15px;
+
+    &__info{
+        display: flex;
+        width:540px;
+        min-width:320px;
+        height: 616px;
+        flex-direction:column;
+        justify-content:flex-start;
+        color: var(--black-text);
+        h2{
+            font-size:2.4rem;
+            font-weight:600;
+            letter-spacing:3px;
+            text-transform:uppercase;
+        }
+        .info__price{
+            font-size:1.3rem;
+            margin-bottom:60px;
+        }
+        .info__description{
+            width: 100%;
+        }
+    }
+}
