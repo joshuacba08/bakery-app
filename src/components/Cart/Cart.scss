@@ -1,0 +1,33 @@
+.cart{
+    margin: 20px 0 60px 0;
+
+
+    &__msg{
+        margin:80px 20px;
+        text-align:center;
+        opacity: 50%;
+    }
+}
+
+
+.list-header{
+    display:grid;
+    grid-template: auto / 0.5fr 2fr 1fr 1fr 1fr;
+    width:80%;
+    max-width: 940px;
+    min-width: 360px;
+    margin:10px auto;
+    border-bottom:1px solid var(--fill-grey);
+    padding:20px 0;
+    gap:10px;
+    font-size:0.9rem;
+
+    &__item{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        font-weight: 600;
+        color: var(--black-text);
+    }
+
+}

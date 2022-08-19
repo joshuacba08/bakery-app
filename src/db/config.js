@@ -23,5 +23,7 @@ export default db;
 
 //Correr por única vez cuando aún no he subido los productos a mi colección.
 if(false){
+  setTimeout(() =>{
     uploadCollectionItems(arrayProducts, 'products');
+  },4000)
 }

@@ -1,0 +1,32 @@
+.cart-item{
+    display:grid;
+    grid-template: auto / 0.5fr 2fr 1fr 1fr 1fr;
+    width:80%;
+    max-width: 940px;
+    min-width: 360px;
+    margin:10px auto;
+    border-bottom:1px solid var(--fill-grey);
+    padding:20px 0;
+    gap:10px;
+}
+
+.cart-item__item{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: 400;
+    text-transform:uppercase;
+    color: var(--black-text);
+
+    &:nth-child(1){
+        justify-content:flex-start;
+        font-size:1.2rem;
+        cursor: pointer;
+        opacity: 60%;
+    }
+
+    &:nth-child(2){
+        justify-content:flex-start;
+        font-size:0.8rem;
+    }
+}

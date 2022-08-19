@@ -19,8 +19,13 @@ const ItemListContainer = () => {
                 const arrayProducts = await getItems('products');
                 setProducts(arrayProducts);
             }else{
+              if(category==='sale'){
+                const arrayProducts = await getItemsByCondition('price','<',200,'products');
+                setProducts(arrayProducts);
+              }else{
                 const arrayProducts = await getItemsByCondition('category','==',category,'products');
                 setProducts(arrayProducts);
+              }
             }
         } catch (error) {
             console.error(error);        

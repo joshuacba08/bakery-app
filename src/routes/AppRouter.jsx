@@ -9,6 +9,7 @@ import NotFound404 from "../pages/NotFound404";
 import ProductsPage from "../pages/ProductsPage";
 import Contact from "../pages/Contact";
 import About from "../pages/About";
+import Checkout from "../pages/Checkout";
 
 const AppRouter = () => {
   return (
@@ -22,6 +23,7 @@ const AppRouter = () => {
         <Route path="/products/:category" element={<ProductsPage />} />
         <Route path="/product/:id" element={<DetailPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound404 />} />

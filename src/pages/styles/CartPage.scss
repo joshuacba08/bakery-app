@@ -1,3 +1,14 @@
 .main{
+    
+    h1{
+        text-align: center;
+        margin:40px;
+        color:var(--black-tex)
+    }
 
+    .button-container{
+        max-width: 640px;
+        margin:0 auto 60px auto;
+        padding:0 64px
+;    }
 }

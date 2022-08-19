@@ -8,7 +8,7 @@ const CartProvider = (props) => {
 
     const addToCart = (item, qty) => {
         const newItem = {...item, qty};
-
+        
         if(cart.some(product => product.id == newItem.id)){
             /*cuando el carrito ya tiene el producto que se está pasando*/ 
             console.warn('El producto ya está en el carrito');
@@ -23,8 +23,15 @@ const CartProvider = (props) => {
             /*Cuando el carrito no tiene el producto*/
             setCart([...cart, newItem]);
         }
+    }
 
+    const removeItemById = (id) => {
+        const newCart = cart.filter( el => el.id !== id);
+        setCart(newCart);
+    }
 
+    const deleteCart = () => {
+        setCart([]);
     }
 
     return(
@@ -33,7 +40,9 @@ const CartProvider = (props) => {
                 /*Acá va todo lo que quiero que se distribulla a través del context*/
                 cart,
                 setCart,
-                addToCart    
+                addToCart,
+                removeItemById,
+                deleteCart    
             }}
         >
             { props.children }

@@ -1,0 +1,39 @@
+.form{
+    width: 100%;
+    max-width:640px;
+    min-width: 360px;
+    margin: 20px auto;
+    padding:20px 15px;
+    h2{
+        text-align: center;
+        margin-bottom:20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing:1px;
+        color: var(--black-text);
+        font-size:1.4rem;
+    }
+    &__group{
+        display:flex;
+        flex-direction:column;
+        margin: 10px 0;
+
+        label{
+            margin: 10px 0;
+        }
+
+        input{
+            height:46px;
+            padding:10px 20px;
+            font-size:1rem;
+            outline:none;
+            &:focus{
+                background-color:#a9b8c32a;
+                border:1px solid #3333336b;
+            }
+        }
+    }
+    button{
+        margin: 36px 0;
+    }
+}
