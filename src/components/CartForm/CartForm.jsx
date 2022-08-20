@@ -9,7 +9,7 @@ import './CartForm.scss';
 const CartForm = () => {
   const navigate = useNavigate();
   //me traigo el cart
-  const { cart } = useContext( CartContext );
+  const { cart, deleteCart } = useContext( CartContext );
   const [success, setSuccess] = useState(false);
   const [orderNumber, setOrderNumber] = useState(null);
   //datos del formulario del formulario
@@ -40,6 +40,7 @@ const CartForm = () => {
     try {
       setSuccess(true);
       const response = await createItem(dataOrder, 'orders');
+      deleteCart();
       setOrderNumber(response);
       
       console.log(response);
